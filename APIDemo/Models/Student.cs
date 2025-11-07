@@ -3,8 +3,8 @@ namespace APIDemo.Models
     public class Student
     {
         public int StudentId { get; set; }
-        public string Name { get; set; } = string.Empty;
-        public string Email { get; set; } = string.Empty;
+        public string Name { get; set; } 
+        public string Email { get; set; }
         public DateTime EnrollmentDate { get; set; }
 
         // Navigation property
