@@ -30,15 +30,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "APIDemo v1");
-        c.RoutePrefix = string.Empty; // Swagger en la raíz
-    });
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "APIDemo v1");
+});
 
 app.UseHttpsRedirection();
 
