@@ -6,6 +6,7 @@ namespace APIDemo.Models
         public string CourseName { get; set; }
         public string Description { get; set; }
         public int Credits { get; set; }
+        public bool Active { get; set; }
 
         // Navigation property
         public ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();

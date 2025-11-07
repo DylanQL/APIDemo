@@ -6,6 +6,7 @@ namespace APIDemo.Models
         public int StudentId { get; set; }
         public int CourseId { get; set; }
         public DateTime EnrollmentDate { get; set; }
+        public bool Active { get; set; }
 
         // Navigation properties
         public Student? Student { get; set; }
